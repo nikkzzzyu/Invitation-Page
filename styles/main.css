@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Cinzel Decorative';
+    src: local('Cinzel Decorative'), url('/font/Cinzel Family/Cinzel_Decorative/CinzelDecorative-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.cursive-typewriter {
+    font-family: "Cinzel Decorative", cursive;
+}
+
+h2 {
+    color: #eee;
+    font-size: 40px;
+    font-weight: bold;
+    position: absolute;
+    top: 200px; /* Adjusted the top value to place it a bit below */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+h1 {
+    color: #eee;
+    margin-top: 10%; /* Adjusted the percentage to move it more below */
+    font-size: clamp(3rem, 10vw, 6rem);
+    font-family: "Cinzel Decorative", cursive;
+}
+
+p {
+    color: #f6eeb9;
+    margin-top: 100px; /* Adjusted margin-top value */
+    font-size: 20px;
+    font-weight: bold;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.parallax {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url(/img/background.png) center/cover no-repeat fixed;
+    margin: 0;
+}
+
+#title {
+    position: absolute;
+    top: 30%; /* Adjusted the percentage to move it more below */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: clamp(3rem, 10vw, 6rem);
+    font-family: "Cinzel Decorative", cursive;
+    color: #eee;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.welcome {
+    opacity: 0; /* Start with initial opacity */
+    animation: fadeIn 2s ease-in-out forwards; /* Apply the fadeIn animation */
+}
