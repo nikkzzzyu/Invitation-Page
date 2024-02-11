@@ -3,6 +3,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // Simulating a loading process with setTimeout
     setTimeout(function () {
         
-        window.location.href = "main.html";
-    }, 10100);
+        window.location.href = 'main.html';
+    }, 13000);
 });

@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     const title = document.getElementById('title');
     const welcomeText = document.getElementById('welcome');
-    const glowingDiamond = document.querySelector('.glowing-diamond');
+    const enterButton = document.querySelector('.enter-button');
 
     // Fade in animation for "Welcome to"
     welcomeText.classList.add('fadeIn');
@@ -11,10 +11,10 @@ document.addEventListener('DOMContentLoaded', function () {
         typeWriterEffect("Lantern Rite!", title, 200);
     }, 3000); // 3 seconds delay before starting the typewriting effect
 
-    // Click event listener for glowing diamond
-    document.addEventListener('click', function () {
-        glowingDiamond.classList.add('clicked');
-    });
+    // Show the enter button after the typewriter effect is complete
+    setTimeout(function () {
+        enterButton.style.opacity = '1'; // Set opacity to 1 to trigger the CSS transition
+    }, 3000 + ("Lantern Rite!".length * 200)); // Adjust the delay based on the typewriter speed
 
     function typeWriterEffect(text, element, speed) {
         let i = 0;
@@ -29,28 +29,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
         type();
     }
-});
 
-document.addEventListener('DOMContentLoaded', function () {
-    const glowingDiamond = document.querySelector('.glowing-diamond');
+    function enterEvent() {
+        alert("Entering the event!");
 
-    document.addEventListener('click', function () {
-        glowingDiamond.classList.add('clicked');
-    });
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-    const glowingDiamond = document.querySelector('.glowing-diamond');
-
-    document.addEventListener('click', function () {
-        glowingDiamond.classList.add('clicked');
-    });
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-    const glowingDiamond = document.querySelector('.glowing-diamond');
-
-    document.addEventListener('click', function () {
-        glowingDiamond.classList.add('clicked');
-    });
+        // Redirect to another file (replace 'yourfile.html' with the actual file path)
+        window.location.href = 'about.html';
+    }
 });

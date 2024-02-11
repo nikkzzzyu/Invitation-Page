@@ -16,8 +16,8 @@ html.dark body {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 500px;
-    height: 62.5px;
+    width: 600px; /* Adjusted width to 600 */
+    height: 75px; /* Adjusted height to maintain the aspect ratio */
     transform: translate(-50%, -50%) scale(0.8);
     transition: all 0.5s;
     user-select: none;
@@ -26,34 +26,36 @@ html.dark body {
 
 .loading-bar img {
     position: absolute;
-    top: 500px;
+    top: 0;
     left: 0;
-    filter: drop-shadow(0 -500px 0 var(--loadingbar-background-color));
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 -600px 0 var(--loadingbar-background-color)); /* Adjusted shadow */
 }
 
 .loading-bar::after {
     content: "";
     position: absolute;
-    top: 500px;
+    top: 600px; /* Adjusted top position to 600 */
     left: 0;
-    filter: drop-shadow(0 -500px 0 var(--loadingbar-prospect-color));
-    width: 500px;
-    height: 62.5px;
+    filter: drop-shadow(0 -600px 0 var(--loadingbar-prospect-color)); /* Adjusted shadow */
+    width: 600px; /* Adjusted width to 600 */
+    height: 75px; /* Adjusted height to maintain the aspect ratio */
     background: url("https://yuanshen.site/imgs/loading-bar.png") no-repeat left 100%;
-    background-size: 500px 62.5px;
+    background-size: 600px 75px; /* Adjusted background size */
     background-position-x: 0;
-    animation: loading-bar 3.5s cubic-bezier(0.28, 0.11, 0.32, 1) infinite forwards;
+    animation: loading-bar 12s cubic-bezier(0.215, 0.61, 0.355, 1) infinite forwards;
 }
 
 @media screen and (max-width: 719px) {
     .loading-bar {
-    display: none;
+        display: none;
     }
 
     @media screen and (orientation: landscape) {
         .loading-bar {
-        display: block !important;
-        transform: translate(-50%, -50%) scale(0.7) !important;
+            display: block !important;
+            transform: translate(-50%, -50%) scale(0.7) !important;
         }
     }
 }
@@ -67,7 +69,7 @@ html.dark body {
 @keyframes loading-bar {
     0% {
         width: 0;
-        background-size: 500px 62.5px;
+        background-size: 600px 75px;
     }
 
     10% {
@@ -99,12 +101,10 @@ html.dark body {
     }
 
     100% {
-        width: 500px;
+        width: 600px;
     }
 }
 
 .loading-bar::after {
-    /* ... previous styles ... */
-    animation: loading-bar 12s cubic-bezier(0.215, 0.61, 0.355, 1) infinite forwards;
+    animation: loading-bar 15s cubic-bezier(0.215, 0.61, 0.355, 1) infinite forwards; /* Adjusted animation duration */
 }
-
