@@ -50,9 +50,25 @@ p {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: url('/img/background.png') center/cover no-repeat fixed;
     margin: 0;
 }
+
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.background-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 
 #title {
     position: absolute;
@@ -100,7 +116,7 @@ p {
     left: 7px;
     transition: 0.2s;
     position: absolute;
-    z-index: -3;
+    z-index: -1; /* Fix the typo here */
 }
 
 .enter-button:hover::after {
