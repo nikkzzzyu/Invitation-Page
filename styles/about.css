@@ -1,3 +1,5 @@
+
+
 .container {
     width: 1000px;
     height: calc(100vh - 160px);
@@ -6,18 +8,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: all 0.3s ease-in-out; 
+    transition: all 0.3s ease-in-out;
 }
+
 @font-face {
     font-family: 'Cinzel Decorative';
-    src: local('Cinzel Decorative'), url('/font/Cinzel Family/Cinzel_Decorative/CinzelDecorative-Regular.ttf') format('truetype');
+    src: local('Cinzel Decorative'), url('../font/Cinzel Family/Cinzel_Decorative/CinzelDecorative-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 h1 {
     text-align: center;
-    font-size: 40px; /* Adjusted font size */
+    font-size: 40px;
     color: #eee;
     margin-bottom: 10px;
     font-family: 'Cinzel Decorative';
@@ -88,15 +91,15 @@ h1 {
 }
 
 .bullet {
-    background: url('/img/buttons/bullet.png') 50% / cover no-repeat;
+    background: url('../img/buttons/bullet.png') 50% / cover no-repeat;
 }
 
 .navi_bullet {
-    background: url('/img/buttons/navi_bullet.png') 50% / cover no-repeat;
+    background: url('../img/buttons/navi_bullet.png') 50% / cover no-repeat;
 }
 
 .pagination-bullet--active {
-    background: url('/img/buttons/navi_bullet.png') 50% / cover no-repeat;
+    background: url('../img/buttons/navi_bullet.png') 50% / cover no-repeat;
 }
 
 .pre,
