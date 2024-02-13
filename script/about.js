@@ -5,15 +5,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let mark = 0;
     const images = [
-        "/img/pictures/pic_one.png",
-        "/img/pictures/pic_two.png",
-        "/img/pictures/pic_three.png",
-        "/img/pictures/pic_four.png",
-        "/img/pictures/pic_five.png",
-        "/img/pictures/pic_six.png",
-        "/img/pictures/pic_seven.png",
-        "/img/pictures/pic_eight.png"
+        "https://github.com/nikkzzzyu/Invitation-Page/blob/main/img/pictures/pic_one.png?raw=true",
+        "https://github.com/nikkzzzyu/Invitation-Page/blob/main/img/pictures/pic_two.png?raw=true",
+        "https://github.com/nikkzzzyu/Invitation-Page/blob/main/img/pictures/pic_three.png?raw=true",
+        "https://github.com/nikkzzzyu/Invitation-Page/blob/main/img/pictures/pic_four.png?raw=true",
+        "https://github.com/nikkzzzyu/Invitation-Page/blob/main/img/pictures/pic_five.png?raw=true",
+        "https://github.com/nikkzzzyu/Invitation-Page/blob/main/img/pictures/pic_six.png?raw=true",
+        "https://github.com/nikkzzzyu/Invitation-Page/blob/main/img/pictures/pic_seven.png?raw=true",
+        "https://github.com/nikkzzzyu/Invitation-Page/blob/main/img/pictures/pic_eight.png?raw=true"
     ];
+
+    // Preload images
+    images.forEach((image) => {
+        const img = new Image();
+        img.src = image;
+    });
 
     function setStatus(index) {
         return {
@@ -46,7 +52,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function updateView() {
         container.innerHTML = images.map((image, index) => {
-            return `<div class="slide ${Object.keys(setStatus(index)).filter(key => setStatus(index)[key]).join(' ')}"><img class="img" src="${image}" alt=""></div>`;
+            const status = setStatus(index);
+            return `<div class="slide ${Object.keys(status).filter(key => status[key]).join(' ')}"><img class="img" src="${image}" alt=""></div>`;
         }).join('');
     }
 
@@ -59,10 +66,9 @@ document.addEventListener("DOMContentLoaded", function () {
             const status = setStatus(index);
             naviBullet.classList.toggle('pagination-bullet--active', mark === index);
 
-            if (status['next-1'] || status['next-2']) {
-                naviBullet.style.transform = `translateX(${(mark - index) * 20}px)`;
-            } else if (status['pre-1'] || status['pre-2'] || status['pre-3']) {
-                naviBullet.style.transform = `translateX(${(mark - index) * 20}px)`;
+            if (status['next-1'] || status['next-2'] || status['pre-1'] || status['pre-2'] || status['pre-3']) {
+                const transformValue = (mark - index) * 20; // Adjust the multiplier for smoother movement
+                naviBullet.style.transform = `translateX(${transformValue}px)`;
             } else {
                 naviBullet.style.transform = '';
             }

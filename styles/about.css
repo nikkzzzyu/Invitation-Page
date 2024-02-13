@@ -1,5 +1,3 @@
-
-
 .container {
     width: 1000px;
     height: calc(100vh - 160px);
@@ -8,19 +6,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; 
 }
-
 @font-face {
     font-family: 'Cinzel Decorative';
-    src: local('Cinzel Decorative'), url('../font/Cinzel Family/Cinzel_Decorative/CinzelDecorative-Regular.ttf') format('truetype');
+    src: local('Cinzel Decorative'), url('/font/Cinzel Family/Cinzel_Decorative/CinzelDecorative-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 h1 {
     text-align: center;
-    font-size: 40px;
+    font-size: 40px; /* Adjusted font size */
     color: #eee;
     margin-bottom: 10px;
     font-family: 'Cinzel Decorative';
@@ -30,7 +27,7 @@ h1 {
     width: 824px;
     height: 465px;
     position: absolute;
-    transition: all 0.5s;
+    transition: opacity 0.5s, transform 0.5s;
     opacity: 0;
 }
 
@@ -88,18 +85,19 @@ h1 {
     outline: none;
     opacity: 1;
     cursor: pointer;
+    transition: transform 0.3s ease-in-out;
 }
 
 .bullet {
-    background: url('../img/buttons/bullet.png') 50% / cover no-repeat;
+    background: url('https://github.com/nikkzzzyu/Invitation-Page/blob/main/img/buttons/bullet.png?raw=true') 50% / cover no-repeat;
 }
 
 .navi_bullet {
-    background: url('../img/buttons/navi_bullet.png') 50% / cover no-repeat;
+    background: url('https://github.com/nikkzzzyu/Invitation-Page/blob/main/img/buttons/navi_bullet.png?raw=true') 50% / cover no-repeat;
 }
 
 .pagination-bullet--active {
-    background: url('../img/buttons/navi_bullet.png') 50% / cover no-repeat;
+    background: url('https://github.com/nikkzzzyu/Invitation-Page/blob/main/img/buttons/navi_bullet.png?raw=true') 50% / cover no-repeat;
 }
 
 .pre,
