@@ -5,14 +5,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let mark = 0;
     const images = [
-        "img/pictures/pic_one.png",
-        "img/pictures/pic_two.png",
-        "img/pictures/pic_three.png",
-        "img/pictures/pic_four.png",
-        "img/pictures/pic_five.png",
-        "img/pictures/pic_six.png",
-        "img/pictures/pic_seven.png",
-        "img/pictures/pic_eight.png"
+        "/img/pictures/pic_one.png",
+        "/img/pictures/pic_two.png",
+        "/img/pictures/pic_three.png",
+        "/img/pictures/pic_four.png",
+        "/img/pictures/pic_five.png",
+        "/img/pictures/pic_six.png",
+        "/img/pictures/pic_seven.png",
+        "/img/pictures/pic_eight.png"
     ];
 
     function setStatus(index) {

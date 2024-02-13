@@ -8,13 +8,19 @@
     align-items: center;
     transition: all 0.3s ease-in-out; 
 }
+@font-face {
+    font-family: 'Cinzel Decorative';
+    src: local('Cinzel Decorative'), url('/font/Cinzel Family/Cinzel_Decorative/CinzelDecorative-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
 h1 {
     text-align: center;
     font-size: 40px; /* Adjusted font size */
     color: #eee;
     margin-bottom: 10px;
-    font-family: '/font/Cinzel Family/Cinzel_Decorative/CinzelDecorative-Regular.ttf';
+    font-family: 'Cinzel Decorative';
 }
 
 .slide {
