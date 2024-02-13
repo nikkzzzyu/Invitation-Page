@@ -29,10 +29,12 @@ document.addEventListener('DOMContentLoaded', function () {
     
         type();
     }
-    
+
     function enterEvent() {
-        alert("Entering the event!");
-    
         window.location.href = 'about.html';
     }
+
+    // Attach click event listener to the Enter button
+    enterButton.addEventListener('click', enterEvent);
+    
 });
