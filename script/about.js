@@ -69,6 +69,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
     setTimeout(showRSVPButton, 20000);
 
+    function handleRSVPButtonClick() {
+
+        console.log("RSVP Approval");
+
+        window.location.href = "approval.html";
+    }
+
+    // Add click event listener to the RSVP button
+    rsvpButton.addEventListener('click', handleRSVPButtonClick);
+
+
     Promise.all([
         Promise.all(images.map(image => {
             return new Promise((resolve, reject) => {
