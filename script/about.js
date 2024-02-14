@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const container = document.querySelector('.container');
     const overlay = document.querySelector('.overlay');
     const textContainer = document.querySelector('.text-container');
+    const rsvpButton = document.querySelector('.rsvp-button');
     const bullets = document.querySelectorAll('.bullet');
     const naviBullets = document.querySelectorAll('.navi_bullet');
     
@@ -53,6 +54,20 @@ document.addEventListener("DOMContentLoaded", function () {
         "Text for Image 7",
         "Text for Image 8"
     ];
+
+        // ... (existing code)
+
+    function showRSVPButton() {
+        console.log("showRSVPButton called");
+        // Add fade-in class to make RSVP button appear
+        rsvpButton.style.display = 'block';
+        setTimeout(function () {
+            rsvpButton.classList.add('fade-in');
+            console.log("fade-in class added");
+        }, 50);
+    }
+
+    setTimeout(showRSVPButton, 20000);
 
     Promise.all([
         Promise.all(images.map(image => {
