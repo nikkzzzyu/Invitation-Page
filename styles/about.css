@@ -47,7 +47,8 @@ h1 {
     right: 100px;
     width: 120px;
     height: 60px;
-    background: url('/img/buttons/rsvp.png') no-repeat center center;
+    background: url('https://github.com/nikkzzzyu/Invitation-Page/blob/main/img/buttons/rsvp.png?raw=true') 50% / cover no-repeat;
+    background-size: 200%;
     border-radius: 50%;
     border: none;
     color: #000;
