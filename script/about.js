@@ -45,17 +45,15 @@ document.addEventListener("DOMContentLoaded", function () {
     ];
 
     const textContent = [
-        "Text for Image 1",
-        "Text for Image 2",
-        "Text for Image 3",
-        "Text for Image 4",
-        "Text for Image 5",
-        "Text for Image 6",
-        "Text for Image 7",
-        "Text for Image 8"
+        "Lantern Rite lanterns adorning streets and harbor",
+        "Colorful traditional performances",
+        "Musical Ensembles and Dragon Dances",
+        "Lantern Rite lanterns, and fireworks",
+        "Snap photos of displays and joyful moments",
+        "Light up Lanterns",
+        "Lantern Rite Kite-flying",
+        "Fireworks mark Lantern Rite's climax as kites soar"
     ];
-
-        // ... (existing code)
 
     function showRSVPButton() {
         console.log("showRSVPButton called");
@@ -76,7 +74,6 @@ document.addEventListener("DOMContentLoaded", function () {
         window.location.href = "approval.html";
     }
 
-    // Add click event listener to the RSVP button
     rsvpButton.addEventListener('click', handleRSVPButtonClick);
 
 
@@ -174,12 +171,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // Add fade-in class to start fade-in animation
             textContainer.classList.add('fade-in');
-        }, { once: true }); // { once: true } ensures the event listener is triggered only once
+        }, { once: true });
 
         // Wait for the fade-in animation to complete and remove the class
         textContainer.addEventListener('transitionend', function () {
             textContainer.classList.remove('fade-in');
-        }, { once: true }); // { once: true } ensures the event listener is triggered only once
+        }, { once: true });
     }
 
     const preButton = document.querySelector('.pre');
