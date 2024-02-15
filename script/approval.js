@@ -5,6 +5,11 @@ var guest = document.getElementById('guest');
 var submit = document.getElementById('submit');
 var buttonsContainer = document.getElementById('buttonsContainer');
 
+function preloader() {
+    document.getElementById('content').style.display = 'block'; // Show the content
+    document.getElementById('loading').style.display = 'none'; // Hide the loading spinner
+}
+
 // Function to show or hide sections based on user choice
 function isChecked(elem) {
     var checkedElement = elem.id;

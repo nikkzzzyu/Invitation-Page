@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="utf-8">
+        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Event Invitation Page</title>
         <link rel="stylesheet" href="styles/main.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400&display=swap">
         <script src="script/main.js"></script>
+        <script src="script/music.js"></script>
     </head>
-
+    
     <body class="parallax">
         <div class="background-image">
             <img src="img/background.png" alt="background">
         </div>
-        
+
+        <div id="player"></div>
+        <iframe id="music-player" src="https://www.youtube.com/embed/PUiYQTIZTNg?autoplay=1&loop=1&controls=0" allow="autoplay"></iframe> 
+    
         <h2 id="welcome" class="welcome">You're invited to</h2>
         <h1 id="title" class="cursive-typewriter"></h1>
-
-        <!-- Additional text below the lantern rite -->
-        <p id="additional-text">February 05 - 25, 2024</p>
         
-        <button class="enter-button" class="button" onclick="enterEvent()">Enter</button>
+        <p id="additional-text">February 05 - 26, 2024</p>
+        
+        <button class="enter-button" onclick="enterEvent()">Enter</button>
     </body>
 </html>

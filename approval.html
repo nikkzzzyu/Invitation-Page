@@ -6,8 +6,10 @@
     <title>RSVP Form</title>
     <link rel="stylesheet" href="styles/approval.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400&display=swap">
+    <script src="script/music.js"></script>
 </head>
 <body>
+    <iframe id="music-player" src="https://www.youtube.com/embed/PUiYQTIZTNg?autoplay=1&loop=1&controls=0" allow="autoplay"></iframe>
     <div class="container">
         <h2>RSVP</h2>
         <p>Will you be attending?</p>
@@ -37,7 +39,6 @@
             </ul>
         </div>
 
-        <!-- Your additional sections will be initially hidden -->
         <ul id="recipient" class="hidden">
             <li class="section-head">Your Info</li>
             <li id="foli1" class="notranslate">
@@ -67,7 +68,6 @@
         <ul id="submit" class="hidden">
             <li>
                 <div class="buttons" id="buttonsContainer">
-                    <!-- Submit buttons will be dynamically added here -->
                 </div>
             </li>
         </ul>

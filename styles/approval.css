@@ -8,6 +8,7 @@ body, html {
 body {
     background: url(https://github.com/nikkzzzyu/Invitation-Page/blob/main/img/abt_bg.png?raw=true) center center no-repeat;
     background-size: cover;
+    background-attachment: fixed; /* Keep the background fixed */
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: 300;
     text-align: center;
@@ -237,5 +238,9 @@ input[type=email] {
 }
 
 label {
+    display: none;
+}
+
+#music-player {
     display: none;
 }
