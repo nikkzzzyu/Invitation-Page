@@ -1,83 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RSVP Form</title>
-    <link rel="stylesheet" href="styles/approval.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400&display=swap">
-    <script src="script/music.js"></script>
-</head>
-<body>
-    <iframe id="music-player" src="https://www.youtube.com/embed/PUiYQTIZTNg?autoplay=1&loop=1&controls=0" allow="autoplay"></iframe>
-    <div class="container">
-        <h2>RSVP</h2>
-        <p>Will you be attending?</p>
-        <ul class="yesno">
-            <li>
-                <input type="radio" id="rsvp-yes" name="selector">
-                <label for="rsvp-yes" class="button">Yes</label>
-            </li>
-            <li>
-                <input type="radio" id="rsvp-no" name="selector">
-                <label for="rsvp-no" class="button">No</label>
-            </li>
-        </ul>
-
-        <div class="message-container hidden" id="messageContainer">
-            <h2 id="messageHeader"></h2>
-            <p id="messageContent"></p>
+    <head>
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>RSVP Form</title>
+        <link rel="stylesheet" href="styles/approval.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400&display=swap">
+        <link rel="icon" type="image/x-icon" href="./img/icon/invitation_icon.jpg">
+        <script src="script/music.js"></script>
+    </head>
+    <body>
+        <iframe id="music-player" src="https://www.youtube.com/embed/PUiYQTIZTNg?autoplay=1&loop=1&controls=0" allow="autoplay"></iframe>
+        <div class="container">
+            <h2>RSVP</h2>
+            <p>Will you be attending?</p>
             <ul class="yesno">
                 <li>
-                    <input type="radio" id="confirm-yes" name="confirm-selector">
-                    <label for="confirm-yes" class="button">Yes</label>
+                    <input type="radio" id="rsvp-yes" name="selector">
+                    <label for="rsvp-yes" class="button">Yes</label>
                 </li>
                 <li>
-                    <input type="radio" id="confirm-no" name="confirm-selector">
-                    <label for="confirm-no" class="button">No</label>
+                    <input type="radio" id="rsvp-no" name="selector">
+                    <label for="rsvp-no" class="button">No</label>
+                </li>
+            </ul>
+
+            <div class="message-container hidden" id="messageContainer">
+                <h2 id="messageHeader"></h2>
+                <p id="messageContent"></p>
+                <ul class="yesno">
+                    <li>
+                        <input type="radio" id="confirm-yes" name="confirm-selector">
+                        <label for="confirm-yes" class="button">Yes</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="confirm-no" name="confirm-selector">
+                        <label for="confirm-no" class="button">No</label>
+                    </li>
+                </ul>
+            </div>
+
+            <ul id="recipient" class="hidden">
+                <li class="section-head">Your Info</li>
+                <li id="foli1" class="notranslate">
+                    <label class="desc" id="title1" for="Field1">Full Name:</label>
+                    <div>
+                        <input id="Field1" placeholder="Full Name" name="Field1" type="text" class="field text medium" />
+                    </div>
+                </li>
+                <li id="foli5" class="notranslate">
+                    <label class="desc" id="title5" for="Field5">Email:</label>
+                    <div>
+                        <input id="Field5" placeholder="Email" name="Field5" type="email" spellcheck="false" class="field text medium" value="" maxlength="255" tabindex="5"/>
+                    </div>
+                </li>
+            </ul>
+
+            <ul id="guest" class="hidden">
+                <li class="section-head">Guest Info</li>
+                <li id="foli3" class="notranslate">
+                    <label class="desc" id="title3" for="Field3">Full Name:</label>
+                    <div>
+                        <input id="Field3" placeholder="Full Name" name="Field3" type="text" class="field text medium"/>
+                    </div>
+                </li>
+            </ul>
+
+            <ul id="submit" class="hidden">
+                <li>
+                    <div class="buttons" id="buttonsContainer">
+                    </div>
                 </li>
             </ul>
         </div>
 
-        <ul id="recipient" class="hidden">
-            <li class="section-head">Your Info</li>
-            <li id="foli1" class="notranslate">
-                <label class="desc" id="title1" for="Field1">Full Name:</label>
-                <div>
-                    <input id="Field1" placeholder="Full Name" name="Field1" type="text" class="field text medium" />
-                </div>
-            </li>
-            <li id="foli5" class="notranslate">
-                <label class="desc" id="title5" for="Field5">Email:</label>
-                <div>
-                    <input id="Field5" placeholder="Email" name="Field5" type="email" spellcheck="false" class="field text medium" value="" maxlength="255" tabindex="5"/>
-                </div>
-            </li>
-        </ul>
+        <div class="message-container hidden" id="messageContainerSingle">
+            <h2 id="messageHeaderSingle"></h2>
+            <p id="messageContentSingle"></p>
+        </div>
 
-        <ul id="guest" class="hidden">
-            <li class="section-head">Guest Info</li>
-            <li id="foli3" class="notranslate">
-                <label class="desc" id="title3" for="Field3">Full Name:</label>
-                <div>
-                    <input id="Field3" placeholder="Full Name" name="Field3" type="text" class="field text medium"/>
-                </div>
-            </li>
-        </ul>
-
-        <ul id="submit" class="hidden">
-            <li>
-                <div class="buttons" id="buttonsContainer">
-                </div>
-            </li>
-        </ul>
-    </div>
-
-    <div class="message-container hidden" id="messageContainerSingle">
-        <h2 id="messageHeaderSingle"></h2>
-        <p id="messageContentSingle"></p>
-    </div>
-
-    <script src="script/approval.js"></script>
-</body>
+        <script src="script/approval.js"></script>
+    </body>
 </html>
